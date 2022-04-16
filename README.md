@@ -8,6 +8,8 @@
 
 ```shell
 npm start
+
+npm run test
 ```
 
 ### Git & npm commands

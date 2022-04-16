@@ -4,7 +4,13 @@
 
 - Startup and configuration demo project with NodeJS
 
-### Git commands
+### Run this started app
+
+```shell
+npm start
+```
+
+### Git & npm commands
 
 ```shell
 npm init
@@ -18,4 +24,31 @@ git branch -m main
 git commit -am 'message'
 
 git checkout -b develop
+
+npm install express
+
+npm install jest -D
 ```
+
+### Docker commands
+
+```shell
+docker-compose up --build
+
+docker build -t started-nodejs .
+
+docker volume create --name nodemodules
+```
+
+### Removing volumes, services and containers
+
+```shell
+docker rm app 
+
+docker volume rm nodemodules
+
+docker stop $(docker ps -aq)
+
+docker rm $(docker ps -aq)
+```
+

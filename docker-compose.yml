@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  app:
+    container_name: started-nodejs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm start
+    volumes:
+      - ./:/usr/src/app
+      - nodemodules:/src/node_modules
+    environment:
+      - PORT=3000
+    ports:
+      - 3000:3000
+volumes:
+  nodemodules: {}
